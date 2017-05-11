@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View" />
+        <import type="utils.CommonUtils" alias="MyUtils" />
+        <variable
+            name="model"
+            type="entity.MsgModel"/>
+
+        <variable
+            name="viewmodel"
+            type="com.example.administrator.app.ChatItemViewModel"/>
+    </data>
+
+    <RelativeLayout
+        android:id="@+id/rl_root"
+        android:gravity="center_horizontal"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="10.0dip"
+        android:paddingRight="10.0dip"
+        android:focusable="true"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+        <View
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_view"
+            android:layout_width="fill_parent"
+            android:layout_height="3.0dip"/>
+
+        <widget.MyFrameLayout
+            android:id="@+id/fl_len"
+            android:background="@color/transparent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:layout_width="55dp"
+            android:layout_height="45.0dip"
+            android:layout_below="@id/tv_view"
+            android:layout_centerInParent="true"
+            app:msgStatus="@{model.status}"
+            app:msgPlayTime="@{model.playTime}"
+           >
+
+            <FrameLayout
+                android:id="@+id/fl_bg"
+                android:background="@{model.status==3?@drawable/shape_chat_play_bg:(model.isRead?@drawable/shape_chat_readed_bg:@drawable/shape_chat_bg)}"
+                android:layout_width="match_parent"
+                android:layout_height="45.0dip"
+                />
+
+            <ImageView
+                android:id="@+id/iv_anim1"
+                android:visibility="gone"
+                android:layout_width="45.0dip"
+                android:layout_height="45.0dip"
+                android:src="@drawable/photo_light_gray_bg"
+                android:layout_below="@id/tv_view"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/iv_anim2"
+                android:visibility="gone"
+                android:layout_width="45.0dip"
+                android:layout_height="45.0dip"
+                android:src="@drawable/photo_light_deep_gray_bg"
+                android:scaleType="fitXY"
+                android:layout_below="@id/tv_view"
+                android:layout_centerHorizontal="true"/>
+
+            <widget.RoundedImageView
+                android:id="@+id/iv_chat_photo"
+                android:gravity="center_horizontal"
+                android:layout_gravity="center_horizontal"
+                android:background="@mipmap/default_user_photo"
+                android:layout_width="45.0dip"
+                android:layout_height="45.0dip"
+                android:scaleType="fitXY"
+                android:onClick="@{() -> viewmodel.itemClick(model)}"
+                android:layout_centerHorizontal="true"/>
+
+            <ImageView
+                android:id="@+id/iv_like"
+                android:background="@mipmap/like_pic"
+                android:layout_width="18dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginRight="-5dp"
+                android:scaleType="fitXY"
+                android:visibility="@{model.like ? View.VISIBLE: View.INVISIBLE}"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:rotation="10.0"/>
+
+            <ImageView
+                android:id="@+id/iv_block"
+                android:visibility="invisible"
+                android:layout_width="45.0dip"
+                android:layout_height="45.0dip"
+                android:src="@mipmap/block_user"
+                android:scaleType="fitXY"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"/>
+        </widget.MyFrameLayout>
+
+        <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/tv_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2.0dip"
+            android:layout_marginRight="2.0dip"
+            android:text="@{model.userName}"
+            android:layout_below="@id/fl_len"/>
+    </RelativeLayout>
+</layout>

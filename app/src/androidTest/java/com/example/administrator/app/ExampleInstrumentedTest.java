@@ -1,4 +1,4 @@
-package com.example.administrator.eproject3mymvvm;
+package com.example.administrator.app;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

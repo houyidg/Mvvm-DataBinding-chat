@@ -7,5 +7,19 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <!--RecorderButton-->
+    <declare-styleable name="RecorderButton">
+        <attr name="txt_normal" format="string"/>
+        <attr name="txt_recording" format="string"/>
+        <attr name="txt_want_cancel" format="string"/>
+        <attr name="bg_normal" format="reference"/>
+        <attr name="bg_recording" format="reference"/>
+        <attr name="bg_want_cancel" format="reference"/>
+        <attr name="min_record_time" format="float"/>
+        <attr name="max_record_time" format="float"/>
+        <attr name="max_voice_level" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="RoundImageView">
+        <attr name="borderradius" format="dimension"/>
+    </declare-styleable>
 </resources>

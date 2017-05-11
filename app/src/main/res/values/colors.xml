@@ -3,4 +3,21 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+    <color name="transparent">#00000000</color>
+    <color name="edit_bg_35p">#5affffff</color>
+    <color name="black">#000000</color><!--黑色 -->
+    <color name="edit_bg_55p">#80ffffff</color>
+    <color name="app_blue">#0099FF</color><!--白色 -->
+
+    <color name="white">#FFFFFF</color><!--白色 -->
+    <color name="chat_start_play_bg">#EEDA5B</color><!--黑色 -->
+    <color name="chat_start_bg">#DFEDCC</color><!--黑色 -->
+    <color name="chat_end_bg">#37CBDD</color><!--黑色 -->
+    <color name="chat_end_play_bg">#EA9B20</color><!--黑色 -->
+
+    <!--黑色 -->
+    <color name="chat_btn_bg2">#85FF02</color><!--黑色 -->
+    <color name="chat_btn_bg3">#FF8BFF</color><!--黑色 -->
+    <color name="chat_btn_bg4">#2B68FF</color><!--黑色 -->
+    <color name="chat_btn_bg5">#6D6BFF</color><!--黑色 -->
 </resources>

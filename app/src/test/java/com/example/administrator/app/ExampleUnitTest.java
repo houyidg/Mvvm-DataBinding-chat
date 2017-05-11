@@ -1,4 +1,4 @@
-package com.example.administrator.eproject3mymvvm;
+package com.example.administrator.app;
 
 import org.junit.Test;
 

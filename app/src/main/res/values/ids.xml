@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="status_view_id" type="id" />
+    <item name="send_status_view_id" type="id" />
+    <item name="rv_is_add_item_decoration" type="id" />
+    <item name="rv_is_init_param" type="id" />
+    <item name="rv_is_add_gesture_listener" type="id" />
+</resources>
