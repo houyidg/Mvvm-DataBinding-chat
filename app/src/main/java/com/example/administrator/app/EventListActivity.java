@@ -10,7 +10,7 @@ import entity.MsgModel;
 import utils.AppConfig;
 import utils.CommonUtils;
 
-public class EventListActivity extends AppCompatActivity implements ChatListRecycleViewAdapter.ItemViewClickListener {
+public class EventListActivity extends AppCompatActivity {
     EventListBinding eventListBinding;
     ChatViewModel eventListViewModel;
     @Override
@@ -40,17 +40,7 @@ public class EventListActivity extends AppCompatActivity implements ChatListRecy
         MyGridViewLayoutManager myGridViewLayoutManager = new MyGridViewLayoutManager(this, 1);
         myGridViewLayoutManager.setReverseLayout(true);
         rvList.setLayoutManager(myGridViewLayoutManager);
-        ChatListRecycleViewAdapter adapter = new ChatListRecycleViewAdapter(this, "123", new ArrayList<MsgModel>(), rvList);
+        ChatListRecycleViewAdapter adapter = new ChatListRecycleViewAdapter(this, "123", new ArrayList<MsgModel>());
         rvList.setAdapter(adapter);
-    }
-
-    @Override
-    public void msgBarClick(int paramInt) {
-
-    }
-
-    @Override
-    public boolean photoClick(int paramInt, MsgModel paramMsgModel) {
-        return false;
     }
 }

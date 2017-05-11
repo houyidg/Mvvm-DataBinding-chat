@@ -1,4 +1,4 @@
-package com.example.administrator.app;
+package utils;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;

@@ -17,6 +17,7 @@ import java.util.List;
 
 import entity.MsgModel;
 import recordlib.RecorderButton;
+import utils.RandomGUID;
 
 /**
  * Created by Administrator on 2017/5/9.
