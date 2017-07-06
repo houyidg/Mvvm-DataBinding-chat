@@ -37,11 +37,10 @@ public class ChatViewModel extends BaseObservable {
         List<MsgModel> msgModels = DataRepository.produceData();
         //init data
         items.addAll(msgModels);
-        String str = playVoiceBaseUrl;
         this.eventListBinding = eventListBinding;
         RecorderButton rbEnterChat = eventListBinding.rbEnterChat;
         rbEnterChat.setAudioStateRecorderListener(new ChatViewModel.MyRecordListener());
-        rbEnterChat.initAudioRecordManager(str);
+        rbEnterChat.initAudioRecordManager(playVoiceBaseUrl);
     }
 
     public void loadData(boolean isRefresh) {

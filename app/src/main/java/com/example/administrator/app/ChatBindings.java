@@ -30,7 +30,6 @@ public class ChatBindings {
         else {
             stopAnimingUnSendMsg((FrameLayout) fl.findViewById(R.id.fl_bg));
         }
-
         View ivPhoto = fl.findViewById(R.id.iv_chat_photo);
         if (status==3) {
             setChatPhotoScale(1.2F,200l,null,ivPhoto);
@@ -57,7 +56,6 @@ public class ChatBindings {
         fl.setLayoutParams(layoutParams);
     }
 
-
     public static void startAnimingUnSendMsg(FrameLayout flLen) {
         if(flLen==null){
             return;
@@ -73,6 +71,7 @@ public class ChatBindings {
             flLen.setTag(R.id.send_status_view_id, anim);
         }
     }
+
     public static void stopAnimingUnSendMsg(FrameLayout flLen) {
         if(flLen==null){return;}
         flLen.setAlpha(1f);

@@ -104,9 +104,6 @@ public class ChatItemViewModel extends BaseObservable {
         }
     }
 
-
-    /**
-     */
     private void stopVoice() {
         if (mediaHelper != null) {
             mediaHelper.stopPlay();

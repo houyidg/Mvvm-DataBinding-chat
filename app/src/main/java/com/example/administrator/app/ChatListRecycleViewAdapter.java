@@ -35,8 +35,8 @@ public class ChatListRecycleViewAdapter extends RecyclerView.Adapter {
     }
 
     @Override
-    public void onBindViewHolder(final RecyclerView.ViewHolder paramViewHolder, final int position) {
-        final ChatViewHolder viewHolder = (ChatViewHolder) paramViewHolder;
+    public void onBindViewHolder(final RecyclerView.ViewHolder viewHolder1, final int position) {
+        final ChatViewHolder viewHolder = (ChatViewHolder) viewHolder1;
         ItemChatBinding itemChatBinding = viewHolder.itemChatBinding;
         final MsgModel msgModel = msgModels.get(position);
         itemChatBinding.setModel(msgModel);
@@ -50,7 +50,6 @@ public class ChatListRecycleViewAdapter extends RecyclerView.Adapter {
 
     static class ChatViewHolder extends RecyclerView.ViewHolder {
         public ItemChatBinding itemChatBinding;
-
         public ChatViewHolder(View view) {
             super(view);
             itemChatBinding = ItemChatBinding.bind(view);

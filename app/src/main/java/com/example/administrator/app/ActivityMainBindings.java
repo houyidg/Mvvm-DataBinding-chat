@@ -54,5 +54,4 @@ public class ActivityMainBindings {
             swipeRefresh.setFreshStatue(ISwipe.FreshStatus.SUCCESS);             //下拉刷新 完成
         }
     }
-
 }

@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import entity.MsgModel;
 import utils.AppConfig;
 import utils.CommonUtils;
+import utils.DateUtils;
 
 public class EventListActivity extends AppCompatActivity {
     EventListBinding eventListBinding;
@@ -22,6 +23,7 @@ public class EventListActivity extends AppCompatActivity {
         setupRecycleView();
         setupViewModel();
         setupScreenSize();
+        DateUtils.getLocalTimeDateFromUTC2();
     }
 
     private void setupScreenSize() {
